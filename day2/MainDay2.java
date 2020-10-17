@@ -29,6 +29,8 @@ public class MainDay2 {
     ) {
         st.getCourses()
           .forEach(course -> {
+              
+              //Good.. but you might use function on map called computeIfAbsent
               if (acc.containsKey(course)) {
                   acc.get(course)
                      .add(st);
