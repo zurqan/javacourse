@@ -27,13 +27,13 @@ public class MainDay2 {
             HashMap<Course, List<Student>> acc,
             Student st
     ) {
-        ArrayList<Student> list = new ArrayList<>();
         st.getCourses()
           .forEach(course -> {
               if (acc.containsKey(course)) {
                   acc.get(course)
                      .add(st);
               } else {
+                  ArrayList<Student> list = new ArrayList<>();
                   list.add(st);
                   acc.put(course, list);
               }
